@@ -103,6 +103,8 @@ Datenschutz & Sicherheit > Kamera**.
 Zum Beenden im Kamerafenster `Esc` drücken. Alternativ kann das Fenster
 über die Titelleiste geschlossen werden.
 
+Zum Speichern eines neuen Referenzbildes im Kamerafenster `r` drücken.
+
 Falls Kamera `0` nicht die gewünschte Kamera ist, kann ein anderer Index
 ausgewählt werden:
 
