@@ -23,12 +23,14 @@ Der erste Ansatz des Projektes basierte auf einer, wie in der Vorlesung gelernte
 
 Im zweiten Ansatz wurde der farbige Aufbau der Scheibe genutzt.
 Dabei sucht der Algorithmus im ersten Schritt nach größeren Clustern von grünen oder roten Pixeln.
-Durch die Berechnung der Mittelpunkte jedes Clusters, ist eine Einteilung in einen äußeren und einen inneren Ring möglich. Dadurch besitzt das System einen äußeren Ring an Segmenten und einen inneren Ring an Segmenten.
+Durch die Berechnung der Mittelpunkte jedes Clusters, ist eine Einteilung in einen äußeren und einen inneren Ring möglich. Dadurch besitzt das System einen äußeren Ring an Segmenten und einen inneren Ring an Segmenten, welche über eine Rot-Grün-Maske sehr deutlich wird.
 Um diese "Segment-Ringe" wird jeweils um die Punkte mit dem höchsten und dem niedrigsten Radius eine Ellipse gelegt, um die Grenzen der Doppel- und Dreifachfelder und damit die grobe Form der Scheibe zu definieren.
 <p align="center">
-  <img src="Bilder/Farbsegmente_gerade.png" width="30%" hspace="40"/>
-  <img src="Bilder/Farbsegmente_schräg.png" width="30%" hspace="40"/>
+  <img src="Bilder/Farbsegmente_gerade.png" width="25%" hspace="30"/>
+  <img src="Bilder/Farbsegmente_schräg.png" width="25%" hspace="30"/>
+  <img src="Bilder/Rot_Gruen_Maske.png" width="25%" hspace="30"/>
 </p>
+![alt text](image.png)
 
 Der nächste Schritt sieht das Identifizieren der Punktsektoren-Linien vor. Dafür wird an der kürzeren Seite der, im ersten Schritt identifizierten, Farbsegmente eine angenäherte Gerade angelegt, welche bis zum äußeren "Single-Bull" (grüner Ring, 25 Punkte) führt. Damit sind Einzel-, Doppel- und Dreifach-Felder, sowie Bull und Single Bull eindeutig definiert und abgegrenzt.
 <p align="center">
