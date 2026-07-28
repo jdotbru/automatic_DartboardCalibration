@@ -51,17 +51,19 @@ Ein Auswertungsvergleich zwischen einer manuelle und einer automatischen Kalibri
 Bereits steckende Pfeile und das Abhängen eines kleinen Bereiches der Scheibe beeinflusst die Funktionalität kaum. Lediglich die Erkennung der 20 und damit die Definition der Punktefelder wird durch das Abhängen der 20 vollständig verhindert.
 Probleme weist das System jedoch bei starken Störungsfiltern auf. Gerade die Erkennung der Farb-Cluster wird stark von nicht-farbigen Pixeln gestört und unterbrochen, wodurch bei einem zu hohen Störgrad falsche Segmente identifiziert werden.
 <p align="center">
-  <img src="Bilder/steckende_Pfeile.png" width="10%" />
-  <img src="Bilder/verdecktes_Board.png" width="10%" />
-  <img src="Bilder/Gaussian.png" width="10%" />
-  <img src="Bilder/Salt_Pepper.png" width="10%" />
-  <img src="Bilder/Speckle.png" width="10%" />
+  <img src="Bilder/steckende_Pfeile.png" width="15%" />
+  <img src="Bilder/verdecktes_Board.png" width="15%" />
+  <img src="Bilder/Gaussian.png" width="15%" />
+  <img src="Bilder/Salt_Pepper.png" width="15%" />
+  <img src="Bilder/Speckle.png" width="15%" />
 </p>
 
 # Poster und unterstützende Medien
 [Projektposter (PDF)](docs/Poster.pdf)
 
-# Virtuelle Umgebung
+
+
+## Virtuelle Umgebung
 conda activate base
 conda deactivate
 
