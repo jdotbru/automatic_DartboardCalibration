@@ -37,18 +37,29 @@ Der letzte Schritt ist das Testen der Robustheit des Systems auf Störungen. Daf
 Das System zeigt eine sinnvolle und robuste Erkennung der Dartscheibe. 
 Die einzelnen Segment werden in Echtzeit mit einem Live-Kamerabild verhätlnismäßig sehr genau erkannt. Hierbei funktioniert sowohl die Farb-Cluster-Erkennung, als auch die Berechnung der Segmentgrenzen stabil von vorne und von der Seite.
 <p align="center">
-  <img src="Bilder/Farbsegmente_gerade.png" width="45%" />
-  <img src="Bilder/Farbsegmente_schräg.png" width="45%" />
+  <img src="Bilder/Farbsegmente_gerade.png" width="30%" />
+  <img src="Bilder/Farbsegmente_schräg.png" width="30%" />
 </p>
 
 Auch die Erkennung der 20 funktioniert hinreichend genau, sodass aus verschiedenen Winkeln und bei leichter Störung zuverlässig der Drehwinkel der Scheibe erkannt werden kann.
+<p align="center">
+  <img src="Bilder/Endergebnis_gerade.png" width="30%" />
+  <img src="Bilder/Endergebnis_schräg.png" width="30%" />
+</p>
+
 Ein Auswertungsvergleich zwischen einer manuelle und einer automatischen Kalibrierung ergab eine prozentuale Quote von korrekt erkannten Würfen von __% bei einer manuellen Kalibrierung und von __% bei einer automatischen Kalibrierung mit diesem System.
 Bereits steckende Pfeile und das Abhängen eines kleinen Bereiches der Scheibe beeinflusst die Funktionalität kaum. Lediglich die Erkennung der 20 und damit die Definition der Punktefelder wird durch das Abhängen der 20 vollständig verhindert.
 Probleme weist das System jedoch bei starken Störungsfiltern auf. Gerade die Erkennung der Farb-Cluster wird stark von nicht-farbigen Pixeln gestört und unterbrochen, wodurch bei einem zu hohen Störgrad falsche Segmente identifiziert werden.
+<p align="center">
+  <img src="Bilder/steckende_Pfeile.png" width="10%" />
+  <img src="Bilder/verdecktes_Board.png" width="10%" />
+  <img src="Bilder/Gaussian.png" width="10%" />
+  <img src="Bilder/Salt_Pepper.png" width="10%" />
+  <img src="Bilder/Speckle.png" width="10%" />
+</p>
 
-# Poster und Slides
-
-
+# Poster und unterstützende Medien
+[Projektposter (PDF)](docs/Poster.pdf)
 
 # Virtuelle Umgebung
 conda activate base
