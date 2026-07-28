@@ -36,8 +36,10 @@ Der letzte Schritt ist das Testen der Robustheit des Systems auf Störungen. Daf
 # Ergebnisse und Auswertung
 Das System zeigt eine sinnvolle und robuste Erkennung der Dartscheibe. 
 Die einzelnen Segment werden in Echtzeit mit einem Live-Kamerabild verhätlnismäßig sehr genau erkannt. Hierbei funktioniert sowohl die Farb-Cluster-Erkennung, als auch die Berechnung der Segmentgrenzen stabil von vorne und von der Seite.
-![Bild der Farbsegment](Bilder/Farbsegmente_gerade.png)
-![Schräges Bild der Farbsegment](Bilder/Farbsegmente_schräg.png.png)
+<p align="center">
+  <img src="Bilder/Farbsegmente_gerade.png" width="45%" />
+  <img src="Bilder/Farbsegmente_schräg.png" width="45%" />
+</p>
 
 Auch die Erkennung der 20 funktioniert hinreichend genau, sodass aus verschiedenen Winkeln und bei leichter Störung zuverlässig der Drehwinkel der Scheibe erkannt werden kann.
 Ein Auswertungsvergleich zwischen einer manuelle und einer automatischen Kalibrierung ergab eine prozentuale Quote von korrekt erkannten Würfen von __% bei einer manuellen Kalibrierung und von __% bei einer automatischen Kalibrierung mit diesem System.
