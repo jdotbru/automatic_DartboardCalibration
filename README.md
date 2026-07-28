@@ -57,6 +57,7 @@ Auch die Erkennung der 20 funktioniert hinreichend genau, sodass aus verschieden
 </p>
 
 Ein Auswertungsvergleich zwischen einer manuelle und einer automatischen Kalibrierung ergab eine prozentuale Quote von korrekt erkannten Würfen von __% bei einer manuellen Kalibrierung und von __% bei einer automatischen Kalibrierung mit diesem System.
+
 Bereits steckende Pfeile und das Abhängen eines kleinen Bereiches der Scheibe beeinflusst die Funktionalität kaum. Lediglich die Erkennung der 20 und damit die Definition der Punktefelder wird durch das Abhängen der 20 vollständig verhindert.
 Probleme weist das System jedoch bei starken Störungsfiltern auf. Gerade die Erkennung der Farb-Cluster wird stark von nicht-farbigen Pixeln gestört und unterbrochen, wodurch bei einem zu hohen Störgrad falsche Segmente identifiziert werden.
 <p align="center">
