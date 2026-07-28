@@ -17,34 +17,43 @@ Dennoch lassen sich Inspirationen zu der Erkennung der Dartscheibe in Projekten 
 
 # Vorgehen
 Der erste Ansatz des Projektes basierte auf einer, wie in der Vorlesung gelernten, Kantendetektierung und Erkennung im Graustufenbild. Dieser Ansatz zeigte jedoch recht schnell Probleme damit, die exakten Ellipsen des Dartboards zu erkennen, was für eine funktionale Kalibrierung jedoch essenziell ist.
+<p align="center">
+  <img src="Bilder/Kantenerkennung.png" width="50%"/>
+</p>
 
 Im zweiten Ansatz wurde der farbige Aufbau der Scheibe genutzt.
 Dabei sucht der Algorithmus im ersten Schritt nach größeren Clustern von grünen oder roten Pixeln.
 Durch die Berechnung der Mittelpunkte jedes Clusters, ist eine Einteilung in einen äußeren und einen inneren Ring möglich. Dadurch besitzt das System einen äußeren Ring an Segmenten und einen inneren Ring an Segmenten.
 Um diese "Segment-Ringe" wird jeweils um die Punkte mit dem höchsten und dem niedrigsten Radius eine Ellipse gelegt, um die Grenzen der Doppel- und Dreifachfelder und damit die grobe Form der Scheibe zu definieren.
+<p align="center">
+  <img src="Bilder/Farbsegmente_gerade.png" width="30%" hspace="40"/>
+  <img src="Bilder/Farbsegmente_schräg.png" width="30%" hspace="40"/>
+</p>
 
 Der nächste Schritt sieht das Identifizieren der Punktsektoren-Linien vor. Dafür wird an der kürzeren Seite der, im ersten Schritt identifizierten, Farbsegmente eine angenäherte Gerade angelegt, welche bis zum äußeren "Single-Bull" (grüner Ring, 25 Punkte) führt. Damit sind Einzel-, Doppel- und Dreifach-Felder, sowie Bull und Single Bull eindeutig definiert und abgegrenzt.
+<p align="center">
+  <img src="Bilder/Sektoren_ohne20.png" width="50%"/>
+</p>
 
 Nun ist es wichtig, zu erkennen wie die Scheibe hängt und wo welche Punktzahl liegt.
 Dafür wird von den äußersten Eckpunkten jedes Segments ein Trapez nach außen aufgespannt, um die Zahl am Segment einzuschließen. Jedes dieser Trapeze wird geometrisch entzerrt und mit einem vortrainierten easyOCR-Modell ausgewertet. Wird eine 20 erkannt, so wird diese umrandet und auf Basis davon die typische Dartboard-Punktereihenfolge eingefügt. Bei einer Identifikation der 20 über einem gegebenen Wert (in diesem Projekt 5 Grad) wird eine Warnung ausgegeben, dass die Scheibe gerade gedreht werden sollte.
+<p align="center">
+  <img src="Bilder/Zahlensektor_verzerrt.png" width="30%" hspace="40"/>
+  <img src="Bilder/Zahlensektor_entzerrt.png" width="30%" hspace="40"/>
+</p>
 
 Im Anschluss wird das aufgenommene Dartboard in Referenz zu einem Bild von vorne transformiert, sodass eine Homographie von vorne entsteht. Dies passiert auf Basis von identifizierten Merkmalen im Referenz- und im Livebild. Durch diese Homographie ist es im Anschluss möglich, die automatische Kalibrierung in ein komplettes Scoring-System zu integrieren.
 
 Der letzte Schritt ist das Testen der Robustheit des Systems auf Störungen. Dafür wurden unterschiedliche, realistische Szenarien getestet. Abgesehen von drei typischen Störfiltern wurde das System mit einer teilweise verdeckten Scheibe und mit steckenden Darts getestet.
 
-
 # Ergebnisse und Auswertung
 Das System zeigt eine sinnvolle und robuste Erkennung der Dartscheibe. 
 Die einzelnen Segment werden in Echtzeit mit einem Live-Kamerabild verhätlnismäßig sehr genau erkannt. Hierbei funktioniert sowohl die Farb-Cluster-Erkennung, als auch die Berechnung der Segmentgrenzen stabil von vorne und von der Seite.
-<p align="center">
-  <img src="Bilder/Farbsegmente_gerade.png" width="30%" />
-  <img src="Bilder/Farbsegmente_schräg.png" width="30%" />
-</p>
-
 Auch die Erkennung der 20 funktioniert hinreichend genau, sodass aus verschiedenen Winkeln und bei leichter Störung zuverlässig der Drehwinkel der Scheibe erkannt werden kann.
 <p align="center">
-  <img src="Bilder/Endergebnis_gerade.png" width="30%" />
-  <img src="Bilder/Endergebnis_schräg.png" width="30%" />
+  <img src="Bilder/Endergebnis_gerade.png" width="25%" hspace="30" />
+  <img src="Bilder/Endergebnis_schräg.png" width="25%" hspace="30" />
+  <img src="Bilder/Endergebnis_gedreht.png" width="25%" hspace="30" />
 </p>
 
 Ein Auswertungsvergleich zwischen einer manuelle und einer automatischen Kalibrierung ergab eine prozentuale Quote von korrekt erkannten Würfen von __% bei einer manuellen Kalibrierung und von __% bei einer automatischen Kalibrierung mit diesem System.
@@ -61,11 +70,6 @@ Probleme weist das System jedoch bei starken Störungsfiltern auf. Gerade die Er
 # Poster und unterstützende Medien
 [Projektposter (PDF)](docs/Poster.pdf)
 
-
-
-## Virtuelle Umgebung
-conda activate base
-conda deactivate
 
 ## Voraussetzungen
 
