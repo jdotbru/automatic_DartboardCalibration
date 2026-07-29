@@ -58,7 +58,7 @@ Auch die Erkennung der 20 funktioniert hinreichend genau, sodass aus verschieden
   <img src="Bilder/Homographie.png" width="20%" hspace="25" />
   <img src="Bilder/Endergebnis_gedreht.png" width="20%" hspace="25" />
 </p>
-![alt text](image.png)
+
 Ein Auswertungsvergleich zwischen einer manuelle und einer automatischen Kalibrierung ergab eine prozentuale Quote von korrekt erkannten Würfen von 80% bei einer manuellen Kalibrierung und von 81% bei einer automatischen Kalibrierung mit diesem System.
 
 Bereits steckende Pfeile und das Abhängen eines kleinen Bereiches der Scheibe beeinflusst die Funktionalität kaum. Lediglich die Erkennung der 20 und damit die Definition der Punktefelder wird durch das Abhängen der 20 vollständig verhindert.
