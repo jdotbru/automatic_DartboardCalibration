@@ -53,10 +53,10 @@ Das System zeigt eine sinnvolle und robuste Erkennung der Dartscheibe.
 Die einzelnen Segment werden in Echtzeit mit einem Live-Kamerabild verhätlnismäßig sehr genau erkannt. Hierbei funktioniert sowohl die Farb-Cluster-Erkennung, als auch die Berechnung der Segmentgrenzen stabil von vorne und von der Seite und eine transformierte Homographie des Dartboards auf ein Referenzbild wird erstellt.
 Auch die Erkennung der 20 funktioniert hinreichend genau, sodass aus verschiedenen Winkeln und bei leichter Störung zuverlässig der Drehwinkel der Scheibe erkannt werden kann.
 <p align="center">
-  <img src="Bilder/Endergebnis_gerade.png" width="20%" hspace="25" />
-  <img src="Bilder/Endergebnis_schräg.png" width="20%" hspace="25" />
-  <img src="Bilder/Homographie.png" width="20%" hspace="25" />
-  <img src="Bilder/Endergebnis_gedreht.png" width="20%" hspace="25" />
+  <img src="Bilder/Endergebnis_gerade.png" width="20%" hspace="20" />
+  <img src="Bilder/Endergebnis_schräg.png" width="20%" hspace="20" />
+  <img src="Bilder/Homographie.png" width="20%" hspace="20" />
+  <img src="Bilder/Endergebnis_gedreht.png" width="20%" hspace="20" />
 </p>
 
 Ein Auswertungsvergleich zwischen einer manuelle und einer automatischen Kalibrierung ergab eine prozentuale Quote von korrekt erkannten Würfen von 80% bei einer manuellen Kalibrierung und von 81% bei einer automatischen Kalibrierung mit diesem System.
