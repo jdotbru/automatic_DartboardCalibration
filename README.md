@@ -9,6 +9,9 @@ Dafür soll ein Skript für die automatisierte Erkennung und Kalibrierung einer 
 - das Erkennen des 20-Punkte-Segmentes und der darauf basierenden Zuordnung aller Punktzahlen
 - das Erkennen einer zu stark gedrehten Dartscheibe und einer daraus folgenden Warnung an den Spieler
 - einer Transformation einer Homographie um einen schrägen Kamerwawinkel auszugleichen
+<p align="center">
+  <img src="Bilder/Kurzgif.gif" width="50%"/>
+</p>
 
 # Related Work und Datensätze
 Der Großteil der dokumentierten Umsetzungen von automatischen Dartzählersystemen
